@@ -1,11 +1,9 @@
 import React from 'react'
 
-
 export default function TestpersonTable(props) {
 	return (
 		<table>
-			<thead>
-			
+			<thead>			
 				<tr>
 				<th>
 					<button

@@ -2,7 +2,6 @@ import React from 'react';
 import TestpersonTable from './components/index.jsx';
 import data from './data/test-persons.json';
 
-
 class App extends React.Component {
 	constructor(props) {
 		super(props)
@@ -19,10 +18,9 @@ class App extends React.Component {
 		}
 		this.sortBy = this.sortBy.bind(this)
 	}
-	
-	
+		
+//Function for sorting the data alphabetically. Always starts by sorting in ascending order.
 	sortBy(key) {
-		 console.log(this.state.direction[key])
 		 if (this.state.direction[key] === "asc"){			 
 	    	this.setState({				
 				data: data.sort(function(a, b) { 			
@@ -47,8 +45,7 @@ class App extends React.Component {
 				}
 				
 			})
-		 }
-		 
+		 }		 
 		 else if (this.state.direction[key] === "desc"){			 
 	    	this.setState({				
 				data: data.sort(function(a, b) { 			
@@ -72,9 +69,9 @@ class App extends React.Component {
 				}
 			})
 		 }
-		 console.log(this.state.direction)
 	}
 	
+//Rendering the table.
 	render() {
 		return (
 			<div
